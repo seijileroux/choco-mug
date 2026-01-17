@@ -1,5 +1,6 @@
 import { ProductCardProps } from "@/interfaces";
 import { Plus, Star } from "lucide-react";
+import Image from 'next/image'
 
 const ProductCard = ({
   name,
@@ -10,7 +11,7 @@ const ProductCard = ({
 }: ProductCardProps) => (
   <div className="relative group bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 flex flex-col items-center text-center w-64 transition-transform hover:-translate-y-2">
     <div className="absolute -top-16 w-32 h-40 drop-shadow-2xl">
-      <img src={image} alt={name} className="w-full h-full object-contain" />
+      <Image src={image} alt={name} className="w-full h-full object-contain" />
     </div>
     <div className="mt-20 w-full">
       <div className="flex justify-end mb-2">

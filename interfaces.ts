@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface NavItemProps {
   label: string;
   active?: boolean;
@@ -8,5 +10,5 @@ export interface ProductCardProps {
   description: string;
   price: string;
   rating: string;
-  image: string;
+  image: StaticImageData;
 }
