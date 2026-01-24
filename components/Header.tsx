@@ -1,28 +1,32 @@
+"use client";
+
 import { NavItemProps } from "@/interfaces";
 import { ShoppingCart, User } from "lucide-react";
+import Link from "next/link";
 
-const NavItem = ({ label, active = false }: NavItemProps) => (
-  <a
-    href="#"
+const NavItem = ({ label, page, active = false }: NavItemProps) => (
+  <Link
+    href={page}
     className={`text-sm transition-colors ${active ? "text-white" : "text-gray-400 hover:text-white"}`}
   >
     {label}
-  </a>
+  </Link>
 );
 
 export default function Header() {
   return (
     <header className="relative z-50 container mx-auto px-8 py-6 flex items-center justify-between">
-      <div className="text-2xl font-black tracking-tighter flex items-center gap-1">
+      <Link
+        href="/"
+        className="text-2xl font-black tracking-tighter flex items-center gap-1"
+      >
         Choco <span className="text-[#6BA7A1]">Mug</span>
-      </div>
+      </Link>
 
       <nav className="hidden lg:flex items-center gap-8 bg-white/5 backdrop-blur-md px-8 py-3 rounded-full border border-white/10">
-        <NavItem label="Главная" active />
-        <NavItem label="Меню" />
-        <NavItem label="О нас" />
-        <NavItem label="Отзывы" />
-        <NavItem label="Акции" />
+        <NavItem label="Главная" page="/" active />
+        <NavItem label="Меню" page="/" />
+        <NavItem label="Корзина" page="/" />
       </nav>
 
       <div className="flex items-center gap-4">

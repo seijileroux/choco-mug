@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 
 export interface NavItemProps {
   label: string;
+  page: string;
   active?: boolean;
 }
 
