@@ -37,7 +37,7 @@ export default function Header() {
           <ShoppingCart size={20} />
           {/* <span className="absolute top-1 right-1 w-2 h-2 bg-[#6BA7A1] rounded-full" /> */}
         </button>
-        <button className="bg-[#6BA7A1] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#5a8d88] transition-all">
+        <button className="bg-[#6BA7A1] text-white px-5 py-2 rounded-full hidden md:flex md:text-sm font-medium hover:bg-[#5a8d88] transition-all">
           Сделать заказ
         </button>
       </div>
